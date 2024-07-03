@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <style>
+            .head-container {
+                display: flex;
+                justify-content: space-between; /* Buttons links und rechts ausrichten */
+                margin-top: 10px; /* Abstand nach oben */
+            }
+        </style>
+
+        <title>Teilnehmerliste auswählen </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div class="head-container">
+            <h1>Teilnehmerliste auswählen</h1>
+   
+            <h:button value="Abmelden" outcome="login"/>
+            
+            
+        </div>
+        <h:dataTable value="#{kurseTeilnehmerReq.kursliste}" var="kurs" cellspacing="">
+            <h:column>
+                <f:facet name="header"> ID </f:facet>
+                #{kurs.kursID}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"> Name </f:facet>
+                #{kurs.kursname}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"> Startdatum </f:facet>
+                #{kurs.startdatum}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"> Rhythmus </f:facet>
+                #{kurs.rhytmus}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"> Anzahl Termine </f:facet>
+                #{kurs.anzahlTermine}
+            </h:column>
+        </h:dataTable>
+        <h:form>
+            <p>
+                <h:outputText value="Kurs-ID eingeben:"/>
+                <h:inputText value="#{kurseTeilnehmerReq.chosenkurs}"/>
+            </p>
+            <h:commandButton value="Teilnehmerliste anzeigen" action="#{kurseTeilnehmerReq.teilnehmerlisteAnfordern}"/>
+           
+        </h:form>
+        
+        
+        <h:form>
+            <h:messages globalOnly="true" style="color: red;"/>
+            
+        </h:form>
+        
+        
+       
+    </h:body>
+</html>

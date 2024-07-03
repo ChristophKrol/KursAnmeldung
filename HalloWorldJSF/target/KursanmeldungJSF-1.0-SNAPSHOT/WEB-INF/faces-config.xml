@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+              version="2.3">
+    
+    
+    
+    <navigation-rule>
+    <from-view-id>/StartseiteTeilnehmer.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>login</from-outcome>
+        <to-view-id>/AnmeldungApp.xhtml</to-view-id>
+    </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+    <from-view-id>/Kursdetails.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>login</from-outcome>
+        <to-view-id>/AnmeldungApp.xhtml</to-view-id>
+    </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+    <from-view-id>/StartseiteKursleiter.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>login</from-outcome>
+        <to-view-id>/AnmeldungApp.xhtml</to-view-id>
+    </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/StartseiteTeilnehmer.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>kursleiteransicht</from-outcome>
+            <to-view-id>/StartseiteKursleiter.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/StartseiteKursleiter.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>teilnehmeransicht</from-outcome>
+            <to-view-id>/StartseiteTeilnehmer.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+    <from-view-id>/StartseiteKursleiter.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>createkurs</from-outcome>
+        <to-view-id>/KursAnlegen.xhtml</to-view-id>
+    </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+    <from-view-id>/KursLöschen.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>login</from-outcome>
+        <to-view-id>/AnmeldungApp.xhtml</to-view-id>
+    </navigation-case>
+    </navigation-rule>
+
+
+</faces-config>
+
+
+

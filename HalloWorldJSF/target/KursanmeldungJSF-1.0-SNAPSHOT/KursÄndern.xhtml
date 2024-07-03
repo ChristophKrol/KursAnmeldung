@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>Kurs anlegen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .button-container {
+                display: flex;
+                justify-content: space-between; /* Buttons links und rechts ausrichten */
+                margin-top: 10px; /* Abstand nach oben */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div>
+            <h1>Kursdaten</h1>
+            <h:outputText value="Kurs-ID"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKursID}"/>
+            <h:outputText value="Kursname:"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.kursname()}"/>
+            <h:outputText value="Startdatum:"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.startdatum()}"/>
+            <h:outputText value="Anzahl Termine:"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.anzahlTermine()}"/>
+            <h:outputText value="Rhythmus:"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.rhytmus()}"/>
+            
+            
+        </div>
+        <h:form>
+            <h1>Kurs ändern</h1>
+            
+            <p>
+                <h:outputText value="Kurs-ID"/>
+                <h:inputText value="#{kursAnlegenReq.kursID}"/>
+            </p>
+
+            <p>
+                <h:outputText value="Kursname"/>
+                <h:inputText value="#{kursAnlegenReq.kursname}"/>
+            </p>
+            
+            <p>
+                <h:outputText value="Startdatum"/>
+                <h:inputText value="#{kursAnlegenReq.startdatum}"/>
+            </p>
+            
+            <p>
+                <h:outputText value="Anzahl Termine"/>
+                <h:inputText value="#{kursAnlegenReq.anzahlTermine}"/>
+            </p>
+            
+            <p>
+                <h:outputText value="Rhythmus"/>
+                <h:inputText value="#{kursAnlegenReq.rhythmus}"/>
+            </p>
+
+            <!-- Buttons links und rechts ausrichten -->
+            <div class="button-container">
+   
+                <h:commandButton value="Kurs aktualisieren" action="#{kursAnlegenReq.kursAktualisieren()}"/>
+            </div>
+            <h:messages globalOnly="true" style="color: red;"/>
+        </h:form>
+        
+    </h:body>
+</html>
+

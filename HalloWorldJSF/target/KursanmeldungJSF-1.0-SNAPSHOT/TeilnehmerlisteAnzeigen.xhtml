@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <style>
+            .head-container {
+                display: flex;
+                justify-content: space-between; /* Buttons links und rechts ausrichten */
+                margin-top: 10px; /* Abstand nach oben */
+            }
+        </style>
+        <script>
+        function reloadPage() {
+           setTimeout(function(){
+               console.log("Reloading");
+               window.location.reload();
+               
+           }, 500);
+                
+             
+        }
+    </script>
+        <title>Teilnehmerliste </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div class="head-container">
+            <h1>Kursdetails</h1>
+            
+            <h:button value="Abmelden" outcome="login"/>
+            
+  
+        </div>
+        <div>
+        
+             <h2> Teilnehmerliste </h2>
+            
+        </div>
+        <h:dataTable value="#{kurseTeilnehmerReq.teilnehmerListe}" var="teilnehmer" cellspacing="">
+            
+            <h:column>
+                <f:facet name="header"> ID </f:facet>
+                #{teilnehmer.id}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"> Benutzername </f:facet>
+                #{teilnehmer.benutzername}
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header"> Vorname </f:facet>
+                #{teilnehmer.vorname}
+            </h:column>
+            <h:column>
+                <f:facet name="header"> Nachname </f:facet>
+                #{teilnehmer.nachname}
+            </h:column>
+            <h:column>
+                <f:facet name="header"> Kursleiter </f:facet>
+                #{teilnehmer.istKursleiter}
+            </h:column>
+            
+            
+        </h:dataTable>
+        <h:form>
+            <h:messages globalOnly="true" style="color: red;"/>
+            
+        </h:form>
+        
+        
+       
+    </h:body>
+</html>

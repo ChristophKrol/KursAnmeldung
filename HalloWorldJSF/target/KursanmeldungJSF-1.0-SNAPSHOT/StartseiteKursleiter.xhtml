@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <style>
+            .head-container {
+                display: flex;
+                justify-content: space-between; /* Buttons links und rechts ausrichten */
+                margin-top: 10px; /* Abstand nach oben */
+            }
+        </style>
+        <script>
+        function reloadPage() {
+           setTimeout(function(){
+               console.log("Reloading");
+               window.location.reload();
+               
+           }, 500);
+                
+             
+        }
+    </script>
+        <title>Kurse bearbeiten </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div class="head-container">
+            <h1>Kurse bearbeiten</h1>
+            <h:button value="Teilnehmeransicht" outcome="teilnehmeransicht" />
+            <h:button value="Abmelden" outcome="login"/>
+            
+            
+        </div>
+        
+        <h:form>
+            
+          
+            <h:commandButton value="Ändern" action="#{startseiteKursleiter.kursAendern()}"></h:commandButton>
+            <h:commandButton value="Löschen" action="#{startseiteKursleiter.kursLoeschen()}"></h:commandButton>
+            <h:commandButton value="Teilnehmerliste anzeigen" action="#{startseiteKursleiter.teilnehmerliste()}"></h:commandButton>
+           
+            
+              
+        </h:form>
+        
+        
+        
+        <h:button value="Kurs anlegen" outcome="createkurs"/>
+        
+        
+        <h:form>
+            <h:messages globalOnly="true" style="color: red;"/>
+            
+        </h:form>
+        
+        
+       
+    </h:body>
+</html>

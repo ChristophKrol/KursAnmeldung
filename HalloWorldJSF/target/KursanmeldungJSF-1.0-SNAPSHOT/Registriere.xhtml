@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>Registrieren</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .button-container {
+                display: flex;
+                justify-content: space-between; /* Buttons links und rechts ausrichten */
+                margin-top: 10px; /* Abstand nach oben */
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h1>Registrieren</h1>
+            <p>Bitte geben Sie alle benötigten Daten ein.</p>
+            <p>Falls Sie bereits registriert sind, benutzen Sie bitte den unteren Anmelde-Button.</p>
+            
+            <p>
+                <h:outputText value="Benutzername:"/>
+                <h:inputText value="#{registrierungReq.benutzername}"/>
+            </p>
+            
+            <p>
+                <h:outputText value="Passwort:"/>
+                <h:inputSecret value="#{registrierungReq.passwort}"/>
+            </p>
+            
+            <p>
+                <h:outputText value="Nachname:"/>
+                <h:inputText value="#{registrierungReq.nachname}"/>
+            </p>
+            
+            <p>
+                <h:outputText value="Vorname:"/>
+                <h:inputText value="#{registrierungReq.vorname}"/>
+            </p>
+            
+            <p>Adresse:</p>
+            
+            <div style="margin-left: 20px;">
+                <p> 
+                    <h:outputText value="Straße:"/>
+                    <h:inputText value="#{registrierungReq.strasse}"/>
+                </p>
+                 
+                <p> 
+                    <h:outputText value="Hausnummer:"/>
+                    <h:inputText value="#{registrierungReq.hausnummer}"/>
+                </p>
+                 
+                <p> 
+                    <h:outputText value="PLZ"/>
+                    <h:inputText value="#{registrierungReq.plz}"/>
+                </p>
+                 
+                <p> 
+                    <h:outputText value="Ort"/>
+                    <h:inputText value="#{registrierungReq.ort}"/>
+                </p>
+            </div>
+            
+            <p>
+                <h:outputText value="Bankverbindung:"/>
+                <h:inputText value="#{registrierungReq.bankverbindung}"/>
+            </p>
+             
+            <p>
+                <h:selectBooleanCheckbox value="#{registrierungReq.istKursleiter}" />
+                <h:outputLabel value="Kursleiter" for="istkursleiter" />
+            </p>
+            
+            <!-- Buttons links und rechts ausrichten -->
+            <div class="button-container">
+   
+                <h:commandButton value="Registrieren" action="#{registrierungReq.registrieren}"/>
+                <h:commandButton value="Login" action="#{anmeldungReq.anmelden}"/>
+            </div>
+            <h:messages globalOnly="true" style="color: red;"/>
+        </h:form>
+        
+    </h:body>
+</html>
+
