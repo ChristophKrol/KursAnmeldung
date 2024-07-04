@@ -5,6 +5,7 @@
 package com.mycompany.halloworldjsf.resources;
 
 import com.mycompany.halloworldjsf.to.KursTO;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
 import jakarta.ws.rs.client.Client;
@@ -19,13 +20,13 @@ import java.util.List;
  *
  * @author christophkrol
  */
-@SessionScoped
+@RequestScoped
 @Named
 public class KursAendernAuswahl implements Serializable{
     private static final long serialVersionUID = -211073331543638808L;
     
     
-    List<KursEintrag> kursliste;
+    List<KursTO> kursliste;
     KursTO chosenKurs;
     int chosenKursID;
     
@@ -33,14 +34,14 @@ public class KursAendernAuswahl implements Serializable{
     public KursAendernAuswahl() {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/KursAnmeldung/webapi/kurs/list");
-        kursliste = target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<KursEintrag>>() {});
+        kursliste = target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<KursTO>>() {});
     }
 
-    public List<KursEintrag> getKursliste() {
+    public List<KursTO> getKursliste() {
         return kursliste;
     }
 
-    public void setKursliste(List<KursEintrag> kursliste) {
+    public void setKursliste(List<KursTO> kursliste) {
         this.kursliste = kursliste;
     }
 

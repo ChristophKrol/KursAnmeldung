@@ -4,6 +4,7 @@
  */
 package com.mycompany.halloworldjsf.resources;
 
+import com.mycompany.halloworldjsf.to.KursTO;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.ExternalContext;
@@ -31,22 +32,25 @@ public class StartseiteTeilnehmer {
     final Logger log = Logger.getLogger(getClass().getName());
     
     
-     List<KursEintrag> kursliste;
+     List<KursTO> kursliste;
 
-    public List<KursEintrag> getKursliste() {
+    public List<KursTO> getKursliste() {
         return kursliste;
     }
 
-    public void setKursliste(List<KursEintrag> kursliste) {
+    public void setKursliste(List<KursTO> kursliste) {
         this.kursliste = kursliste;
     }
      
      
     
     public StartseiteTeilnehmer(){
+        
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/KursAnmeldung/webapi/kurs/list");
-        kursliste = target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<KursEintrag>>() {});
+        kursliste =  target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<KursTO>>() {});
+        
+        
     }
     
     
@@ -62,9 +66,9 @@ public class StartseiteTeilnehmer {
 }
     
     
-    public boolean checkTeilnahme(KursEintrag kurs, int teilnehmerID){
+    public boolean checkTeilnahme(KursTO kurs, int teilnehmerID){
        
-        return kurs.teilnehmer.contains(teilnehmerID);
+        return kurs.getTeilnehmer().contains(teilnehmerID);
 
     }
     
@@ -94,7 +98,7 @@ public class StartseiteTeilnehmer {
     }
     
     public String kursAbmelden(int kursID, int benutzerID){
-         Client client = ClientBuilder.newClient();
+        Client client = ClientBuilder.newClient();
         WebTarget baseLink = client.target("http://localhost:8080/KursAnmeldung/webapi/kurs/");
         WebTarget kursAnmeldungLink = baseLink.path("{kursID}").path("/abmelden/").path("{benutzerID}");
         

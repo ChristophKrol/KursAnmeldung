@@ -23,15 +23,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
         <div>
             <h1>Kursdaten</h1>
             <h:outputText value="Kurs-ID"/>
-            <h:outputText value="#{kursAendernAuswahl.chosenKursID}"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKursID}" id="kursID"/>
             <h:outputText value="Kursname:"/>
-            <h:outputText value="#{kursAendernAuswahl.chosenKurs.kursname()}"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.kursname()}" id="kursname"/>
             <h:outputText value="Startdatum:"/>
-            <h:outputText value="#{kursAendernAuswahl.chosenKurs.startdatum()}"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.startdatum()}" id="startdatum"/>
             <h:outputText value="Anzahl Termine:"/>
-            <h:outputText value="#{kursAendernAuswahl.chosenKurs.anzahlTermine()}"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.anzahlTermine()}" id="anzahlTermine"/>
             <h:outputText value="Rhythmus:"/>
-            <h:outputText value="#{kursAendernAuswahl.chosenKurs.rhytmus()}"/>
+            <h:outputText value="#{kursAendernAuswahl.chosenKurs.rhythmus()}" id="rhythmus"/>
             
             
         </div>
@@ -40,33 +40,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
             
             <p>
                 <h:outputText value="Kurs-ID"/>
-                <h:inputText value="#{kursAnlegenReq.kursID}"/>
+                <h:inputText value="#{kursAendern.kursID}"/>
             </p>
 
             <p>
                 <h:outputText value="Kursname"/>
-                <h:inputText value="#{kursAnlegenReq.kursname}"/>
+                <h:inputText value="#{kursAendern.kursname}"/>
             </p>
             
             <p>
                 <h:outputText value="Startdatum"/>
-                <h:inputText value="#{kursAnlegenReq.startdatum}"/>
+                <h:inputText value="#{kursAendern.startdatum}"/>
             </p>
             
             <p>
                 <h:outputText value="Anzahl Termine"/>
-                <h:inputText value="#{kursAnlegenReq.anzahlTermine}"/>
+                <h:inputText value="#{kursAendern.anzahlTermine}"/>
             </p>
             
             <p>
                 <h:outputText value="Rhythmus"/>
-                <h:inputText value="#{kursAnlegenReq.rhythmus}"/>
+             
+                <h:selectOneMenu value="#{kursAendern.rhythmus}">
+                    <f:selectItem itemValue="WOECHENTLICH" itemLabel="Wöchentlich"/>
+                    <f:selectItem itemValue="ZWEIWOECHIG" itemLabel="Zweiwöchig"/>
+                    <f:selectItem itemValue="MONATLICH" itemLabel="Monatlich"/>
+                </h:selectOneMenu>
             </p>
 
             <!-- Buttons links und rechts ausrichten -->
             <div class="button-container">
    
-                <h:commandButton value="Kurs aktualisieren" action="#{kursAnlegenReq.kursAktualisieren()}"/>
+                <h:commandButton value="Kurs aktualisieren" action="#{kursAendern.kursAktualisieren()}"/>
             </div>
             <h:messages globalOnly="true" style="color: red;"/>
         </h:form>

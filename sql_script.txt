@@ -1,0 +1,99 @@
+CREATE SEQUENCE seq_adressID
+    AS INTEGER
+    START WITH 1000       -- The starting value of the sequence
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_benutzerID
+    AS INTEGER
+    START WITH 1000
+    INCREMENT BY 1;
+
+CREATE SEQUENCE seq_kursID
+    AS INTEGER
+    START WITH 1000
+    INCREMENT BY 1;
+
+CREATE TABLE KursEntity(
+    kursID INTEGER NOT NULL,
+    kursname VARCHAR(100),
+    startdatum TIMESTAMP,
+    anzahlTermine INTEGER,
+    rhythmus VARCHAR(20),
+    benutzerID INTEGER,
+    FOREIGN KEY (benutzerID) REFERENCES BenutzerEntity(benutzerID),
+    PRIMARY KEY (kursID)
+);
+
+ALTER TABLE KursEntity
+ADD CONSTRAINT chk_rhythmus
+CHECK (rhythmus IN ('WOECHENTLICH', 'ZWEIWOECHIG', 'MONATLICH'));
+
+-- ManyToMany - Table
+CREATE TABLE Kursteilnahme(
+    kursID INTEGER,
+    benutzerID INTEGER,
+    FOREIGN KEY(kursID) REFERENCES KURSENTITY(kursID),
+    FOREIGN KEY (benutzerID) REFERENCES BENUTZERENTITY(benutzerID)
+);
+
+-- SPÄTER GUCKEN
+ALTER TABLE Kursteilnahme
+ALTER COLUMN KURSID NOT NULL;
+ALTER TABLE Kursteilnahme
+ALTER COLUMN BENUTZERID NOT NULL;
+ALTER TABLE Kursteilnahme
+ADD CONSTRAINT PK_KursID_BenutzerID
+PRIMARY KEY (KURSID, BENUTZERID);
+
+
+-- Benutzertabelle erstellen
+CREATE TABLE BenutzerEntity(
+    benutzerID INTEGER NOT NULL,
+    benutzername VARCHAR(255),
+    passwort VARCHAR(255),
+    name VARCHAR(255),
+    vorname VARCHAR(255),
+    adressID INTEGER,
+    istKursleiter Boolean,
+    bankverbindung VARCHAR(255),
+    FOREIGN KEY(adressID) REFERENCES ADRESSE(adressID),
+    PRIMARY KEY (benutzerID)
+);
+
+-- Datatype Adresse
+CREATE TABLE Adresse(
+    adressID INTEGER NOT NULL,
+    strasse VARCHAR(100),
+    hausnummer VARCHAR(10),
+    plz VARCHAR(20),
+    ort VARCHAR(255),
+    PRIMARY KEY (adressID)
+);
+
+
+
+
+
+
+
+
+-- Enum Rhytmus
+CREATE TABLE Rhythmus(
+    rhythmus VARCHAR(25),
+    PRIMARY KEY(rhythmus)
+);
+
+
+
+-- Insert rhythmus (SPÄTER SCHAUEN)
+INSERT INTO Rhythmus (rhythmus) VALUES ('wöchentlich');
+INSERT INTO Rhythmus (rhythmus) VALUES ('zweiwöchig');
+INSERT INTO Rhythmus (rhythmus) VALUES ('monatlich');
+
+-- Beziehungen hinzufügen
+
+--SELECT * FROM BENUTZERENTITY;
+--SELECT * FROM KURSENTITY;
+--SELECT * FROM Adresse;
+--SELECT * FROM Kursteilnahme ;
+

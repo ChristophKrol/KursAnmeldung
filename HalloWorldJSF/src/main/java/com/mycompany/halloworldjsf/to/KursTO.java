@@ -16,6 +16,35 @@ public record KursTO(
     String kursname,
     String startdatum,
     int anzahlTermine,
-    Rhythmus rhytmus,
+    Rhythmus rhythmus,
     List<Integer> teilnehmer
-){}
+){
+
+    public int getKursID() {
+        return kursID;
+    }
+
+    public String getKursname() {
+        return kursname;
+    }
+
+    public String getStartdatum() {
+        return startdatum;
+    }
+
+    public int getAnzahlTermine() {
+        return anzahlTermine;
+    }
+
+    public Rhythmus getRhythmus() {
+        return rhythmus;
+    }
+
+    public List<Integer> getTeilnehmer() {
+        return teilnehmer;
+    }
+    
+    
+
+
+}

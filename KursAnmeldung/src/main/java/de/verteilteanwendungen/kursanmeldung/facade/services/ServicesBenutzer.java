@@ -7,6 +7,7 @@ package de.verteilteanwendungen.kursanmeldung.facade.services;
 import de.verteilteanwendungen.kursanmeldung.core.exception.BenutzerNotFoundException;
 
 import de.verteilteanwendungen.kursanmeldung.core.usecases.BenutzerManager;
+import de.verteilteanwendungen.kursanmeldung.core.usecases.BenutzerRegistrieren;
 import de.verteilteanwendungen.kursanmeldung.dataaccess.BenutzerEntity;
 
 import de.verteilteanwendungen.kursanmeldung.dataaccess.dao.BenutzerDAO;
@@ -38,10 +39,12 @@ public class ServicesBenutzer {
     @EJB private BenutzerManager bManager;
     
     
+    
     @POST
     @Path("/benutzer/create")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response createBenutzer(BenutzerTO bto){
+        
         
         if(bManager.benutzerAnlegen(bto.id(), bto.benutzername(), bto.passwort(),
                 bto.vorname(), bto.nachname(), bto.adresse(), bto.bankverbindung(), bto.istKursleiter())){

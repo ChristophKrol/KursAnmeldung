@@ -4,6 +4,7 @@
  */
 package com.mycompany.halloworldjsf.resources;
 
+import com.mycompany.halloworldjsf.to.KursTO;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 import jakarta.ws.rs.client.Client;
@@ -23,20 +24,20 @@ import java.util.List;
 public class KursLoeschen {
     
     int chosenKurs;
-    List<KursEintrag> kursliste;
+    List<KursTO> kursliste;
     
     
     public KursLoeschen(){
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target("http://localhost:8080/KursAnmeldung/webapi/kurs/list");
-        kursliste = target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<KursEintrag>>() {});
+        kursliste = target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<KursTO>>() {});
     }
     
-    public List<KursEintrag> getKursliste() {
+    public List<KursTO> getKursliste() {
         return kursliste;
     }
 
-    public void setKursliste(List<KursEintrag> kursliste) {
+    public void setKursliste(List<KursTO> kursliste) {
         this.kursliste = kursliste;
     }
 

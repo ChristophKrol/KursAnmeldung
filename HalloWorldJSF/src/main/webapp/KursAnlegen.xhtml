@@ -40,7 +40,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
             
             <p>
                 <h:outputText value="Rhythmus"/>
-                <h:inputText value="#{kursAnlegenReq.rhythmus}"/>
+                <h:selectOneMenu value="#{kursAnlegenReq.rhythmus}">
+                    <f:selectItem itemValue="WOECHENTLICH" itemLabel="Wöchentlich"/>
+                    <f:selectItem itemValue="ZWEIWOECHIG" itemLabel="Zweiwöchig"/>
+                    <f:selectItem itemValue="MONATLICH" itemLabel="Monatlich"/>
+                </h:selectOneMenu>
             </p>
 
             <!-- Buttons links und rechts ausrichten -->

@@ -7,7 +7,7 @@ package de.verteilteanwendungen.kursanmeldung.core.usecases;
 import de.verteilteanwendungen.kursanmeldung.core.exception.BenutzerNotFoundException;
 import de.verteilteanwendungen.kursanmeldung.core.entities.datatypes.Adresse;
 import de.verteilteanwendungen.kursanmeldung.dataaccess.BenutzerEntity;
-import de.verteilteanwendungen.kursanmeldung.dataaccess.BenutzerMapper;
+
 import de.verteilteanwendungen.kursanmeldung.dataaccess.dao.AdresseDAO;
 import de.verteilteanwendungen.kursanmeldung.dataaccess.dao.BenutzerDAO;
 import de.verteilteanwendungen.kursanmeldung.facade.to.AdresseTO;

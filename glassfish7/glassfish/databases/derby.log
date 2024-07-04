@@ -1,0 +1,644 @@
+Fri May 10 10:29:19 CEST 2024 : Apache Derby Network Server 10.15.2.0 - (1873585) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+Fri May 10 10:31:12 CEST 2024 Thread[DRDAConnThread_2,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri May 10 10:31:12 CEST 2024 Thread[DRDAConnThread_2,5,main] (DATABASE = Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb), (DRDAID = {3}), Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+Fri May 10 10:31:17 CEST 2024 Thread[DRDAConnThread_2,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri May 10 10:31:17 CEST 2024 Thread[DRDAConnThread_2,5,main] (DATABASE = Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb), (DRDAID = {4}), Datenbank 'Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb' wurde nicht gefunden.
+----------------------------------------------------------------
+Fri May 10 10:31:45 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz a816c00e-018f-619e-f91a-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.4.1
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+Fri May 10 11:29:13 CEST 2024 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'testdb' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'testdb' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'testdb' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri May 10 11:29:13 CEST 2024 Thread[DRDAConnThread_3,5,main] (DATABASE = testdb), (DRDAID = {22}), Datenbank 'testdb' wurde nicht gefunden.
+----------------------------------------------------------------
+Fri May 10 11:31:26 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz 802402e0-018f-619e-f91a-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.4.1
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+Fri May 10 11:49:17 CEST 2024 Thread[DRDAConnThread_5,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'app' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'app' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'app' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri May 10 11:49:17 CEST 2024 Thread[DRDAConnThread_5,5,main] (DATABASE = app), (DRDAID = {50}), Datenbank 'app' wurde nicht gefunden.
+
+------------  Anfang Herunterfahren von Fehlerstack -------------
+
+ERROR XSLA8: Transaktion 667 kann nicht zurückgesetzt werden. Es wird versucht, den Vorgang null durch null zu kompensieren.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:1047)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Xact.java:2283)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Xact.java:1604)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(RAMTransaction.java:1992)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(GenericLanguageConnectionContext.java:1841)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:589)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(ContextManager.java:347)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(TransactionResourceImpl.java:469)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:351)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2405)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:88)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1436)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:710)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(EmbedStatement.java:183)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(DRDAConnThread.java:5405)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:771)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XSLAQ: Im Verzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb/log kann keine Logdatei erstellt werden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:295)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogDirectory(LogToFile.java:2786)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileName(LogToFile.java:2839)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileAtPosition(LogToFile.java:3067)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Scan.java:156)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(LogToFile.java:2892)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:926)
+	... 16 more
+============= begin nested exception, level (1) ===========
+ERROR XSLAQ: Im Verzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb/log kann keine Logdatei erstellt werden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:295)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogDirectory(LogToFile.java:2786)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileName(LogToFile.java:2839)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileAtPosition(LogToFile.java:3067)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Scan.java:156)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(LogToFile.java:2892)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:926)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Xact.java:2283)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Xact.java:1604)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(RAMTransaction.java:1992)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(GenericLanguageConnectionContext.java:1841)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:589)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(ContextManager.java:347)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(TransactionResourceImpl.java:469)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:351)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2405)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:88)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1436)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:710)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(EmbedStatement.java:183)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(DRDAConnThread.java:5405)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:771)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+
+
+------------  Ende Herunterfahren von Fehlerstack -------------
+
+New exception raised during cleanup Can't overwrite cause with ERROR X0Y32: Table/View 'STUDENT' ist bereits in Schema 'APP' vorhanden.
+java.lang.IllegalStateException: Can't overwrite cause with ERROR X0Y32: Table/View 'STUDENT' ist bereits in Schema 'APP' vorhanden.
+	at java.base/java.lang.Throwable.initCause(Throwable.java:463)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:613)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(ContextManager.java:347)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(TransactionResourceImpl.java:469)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:351)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2405)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:88)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1436)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:710)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(EmbedStatement.java:183)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(DRDAConnThread.java:5405)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:771)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XSLA8: Transaktion 667 kann nicht zurückgesetzt werden. Es wird versucht, den Vorgang null durch null zu kompensieren.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:1047)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Xact.java:2283)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Xact.java:1604)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(RAMTransaction.java:1992)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(GenericLanguageConnectionContext.java:1841)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:589)
+	... 11 more
+Caused by: ERROR XSLAQ: Im Verzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb/log kann keine Logdatei erstellt werden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:295)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogDirectory(LogToFile.java:2786)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileName(LogToFile.java:2839)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileAtPosition(LogToFile.java:3067)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Scan.java:156)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(LogToFile.java:2892)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:926)
+	... 16 more
+============= begin nested exception, level (1) ===========
+ERROR XSLA8: Transaktion 667 kann nicht zurückgesetzt werden. Es wird versucht, den Vorgang null durch null zu kompensieren.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:1047)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Xact.java:2283)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Xact.java:1604)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(RAMTransaction.java:1992)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(GenericLanguageConnectionContext.java:1841)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:589)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(ContextManager.java:347)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(TransactionResourceImpl.java:469)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:351)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2405)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:88)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1436)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:710)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(EmbedStatement.java:183)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(DRDAConnThread.java:5405)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:771)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XSLAQ: Im Verzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb/log kann keine Logdatei erstellt werden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:295)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogDirectory(LogToFile.java:2786)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileName(LogToFile.java:2839)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileAtPosition(LogToFile.java:3067)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Scan.java:156)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(LogToFile.java:2892)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:926)
+	... 16 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+ERROR XSLAQ: Im Verzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb/log kann keine Logdatei erstellt werden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:295)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogDirectory(LogToFile.java:2786)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileName(LogToFile.java:2839)
+	at org.apache.derby.impl.store.raw.log.LogToFile.getLogFileAtPosition(LogToFile.java:3067)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Scan.java:156)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(LogToFile.java:2892)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(FileLogger.java:926)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Xact.java:2283)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Xact.java:1604)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(RAMTransaction.java:1992)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(GenericLanguageConnectionContext.java:1841)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(GenericStatementContext.java:589)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(ContextManager.java:347)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(TransactionResourceImpl.java:469)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:351)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2405)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:88)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1436)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(EmbedStatement.java:710)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(EmbedStatement.java:183)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(DRDAConnThread.java:5405)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:771)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (2) ===========
+Cleanup action completed
+Wed May 29 08:56:17 CEST 2024 : Apache Derby Network Server 10.15.2.0 - (1873585) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+----------------------------------------------------------------
+Wed May 29 08:56:33 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz a816c00e-018f-c322-a10a-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.4.1
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+Fri Jun 07 09:18:56 CEST 2024 : Apache Derby Network Server 10.15.2.0 - (1873585) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+----------------------------------------------------------------
+Fri Jun 07 09:19:14 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz a816c00e-018f-f190-9956-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/testdb mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.5
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Jun 07 09:25:31 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz e03f4017-018f-f190-9956-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/kursanmeldung mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.5
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+Fri Jun 07 12:00:36 CEST 2024 Thread[DRDAConnThread_11,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'students' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'students' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'students' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri Jun 07 12:00:36 CEST 2024 Thread[DRDAConnThread_11,5,main] (DATABASE = students), (DRDAID = {40}), Datenbank 'students' wurde nicht gefunden.
+Fri Jun 07 12:00:46 CEST 2024 Thread[DRDAConnThread_11,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'Students' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'Students' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'Students' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri Jun 07 12:00:46 CEST 2024 Thread[DRDAConnThread_11,5,main] (DATABASE = Students), (DRDAID = {41}), Datenbank 'Students' wurde nicht gefunden.
+Fri Jun 07 12:01:10 CEST 2024 Thread[DRDAConnThread_11,5,main] Cleanup action starting
+java.sql.SQLException: Datenbank 'Student' wurde nicht gefunden.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:115)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+Caused by: ERROR XJ004: Datenbank 'Student' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	... 20 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Datenbank 'Student' wurde nicht gefunden.
+	at org.apache.derby.shared.common.error.StandardException.newException(StandardException.java:300)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory.java:170)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:75)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:141)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:225)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:220)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3215)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:772)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:442)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:660)
+	at org.apache.derby.iapi.jdbc.InternalDriver$1.run(InternalDriver.java:656)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.iapi.jdbc.InternalDriver.getNewEmbedConnection(InternalDriver.java:654)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:300)
+	at org.apache.derby.iapi.jdbc.InternalDriver.connect(InternalDriver.java:967)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:125)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:253)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1476)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1426)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3380)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1210)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1010)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:300)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri Jun 07 12:01:10 CEST 2024 Thread[DRDAConnThread_11,5,main] (DATABASE = Student), (DRDAID = {42}), Datenbank 'Student' wurde nicht gefunden.
+Tue Jun 25 20:24:46 CEST 2024 : Apache Derby Network Server 10.15.2.0 - (1873585) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+----------------------------------------------------------------
+Tue Jun 25 20:24:52 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz a816c00e-0190-50a4-a685-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/kursanmeldung mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.5
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+Fri Jun 28 09:59:11 CEST 2024 : Apache Derby Network Server 10.15.2.0 - (1873585) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+----------------------------------------------------------------
+Fri Jun 28 10:00:10 CEST 2024:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz a816c00e-0190-5dda-fe72-00000d560d1c
+für Datenbankverzeichnis /Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases/kursanmeldung mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca
+Geladen aus file:/Users/christophkrol/Desktop/Verteilte%20Anwendungen/glassfish7/javadb/lib/derby.jar
+java.vendor=Homebrew
+java.runtime.version=17.0.2+0
+user.dir=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/bin
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.5
+derby.system.home=/Users/christophkrol/Desktop/Verteilte Anwendungen/glassfish7/glassfish/databases
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''

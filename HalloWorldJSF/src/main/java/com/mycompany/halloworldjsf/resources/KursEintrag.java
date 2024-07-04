@@ -16,7 +16,7 @@ public class KursEintrag{
     String kursname;
     String startdatum;
     int anzahlTermine;
-    String rhytmus;
+    String rhythmus;
     List<Integer> teilnehmer;
 
     public int getKursID() {
@@ -52,11 +52,11 @@ public class KursEintrag{
     }
 
     public String getRhytmus() {
-        return rhytmus;
+        return rhythmus;
     }
 
     public void setRhytmus(String rhytmus) {
-        this.rhytmus = rhytmus;
+        this.rhythmus = rhytmus;
     }
 
     public List<Integer> getTeilnehmer() {
@@ -66,6 +66,19 @@ public class KursEintrag{
     public void setTeilnehmer(List<Integer> teilnehmer) {
         this.teilnehmer = teilnehmer;
     }
+
+    public KursEintrag(int kursID, String kursname, String startdatum, int anzahlTermine, String rhythmus) {
+        this.kursID = kursID;
+        this.kursname = kursname;
+        this.startdatum = startdatum;
+        this.anzahlTermine = anzahlTermine;
+        this.rhythmus = rhythmus;
+    }
+    
+    
+    public KursEintrag(){}
+    
+    
     
     
     

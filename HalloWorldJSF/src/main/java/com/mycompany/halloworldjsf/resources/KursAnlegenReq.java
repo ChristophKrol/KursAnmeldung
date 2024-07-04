@@ -125,12 +125,9 @@ public class KursAnlegenReq {
             this.setStartdatum(null);
             this.setRhythmus(null);
             
-            
-            
-            return "/KursÄndern.xhtml";
         
-        }
-        
+            return "/KursÄndern.xhtml";     
+        }    
         
     }
      
