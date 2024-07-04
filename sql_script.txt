@@ -36,7 +36,7 @@ CREATE TABLE Kursteilnahme(
     FOREIGN KEY (benutzerID) REFERENCES BENUTZERENTITY(benutzerID)
 );
 
--- SPÄTER GUCKEN
+-- ManyToMany config
 ALTER TABLE Kursteilnahme
 ALTER COLUMN KURSID NOT NULL;
 ALTER TABLE Kursteilnahme
@@ -70,27 +70,6 @@ CREATE TABLE Adresse(
     PRIMARY KEY (adressID)
 );
 
-
-
-
-
-
-
-
--- Enum Rhytmus
-CREATE TABLE Rhythmus(
-    rhythmus VARCHAR(25),
-    PRIMARY KEY(rhythmus)
-);
-
-
-
--- Insert rhythmus (SPÄTER SCHAUEN)
-INSERT INTO Rhythmus (rhythmus) VALUES ('wöchentlich');
-INSERT INTO Rhythmus (rhythmus) VALUES ('zweiwöchig');
-INSERT INTO Rhythmus (rhythmus) VALUES ('monatlich');
-
--- Beziehungen hinzufügen
 
 --SELECT * FROM BENUTZERENTITY;
 --SELECT * FROM KURSENTITY;

@@ -22,14 +22,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
     <h:body>
         <div>
             <h1>Kursdaten</h1>
-            <h:outputText value="Kurs-ID"/>
+            <h:outputText value="Kurs-ID: "/>
             <h:outputText value="#{kursAendernAuswahl.chosenKursID}" id="kursID"/>
+            <br></br>
             <h:outputText value="Kursname:"/>
             <h:outputText value="#{kursAendernAuswahl.chosenKurs.kursname()}" id="kursname"/>
+            <br></br>
             <h:outputText value="Startdatum:"/>
             <h:outputText value="#{kursAendernAuswahl.chosenKurs.startdatum()}" id="startdatum"/>
+            <br></br>
             <h:outputText value="Anzahl Termine:"/>
             <h:outputText value="#{kursAendernAuswahl.chosenKurs.anzahlTermine()}" id="anzahlTermine"/>
+            <br></br>
             <h:outputText value="Rhythmus:"/>
             <h:outputText value="#{kursAendernAuswahl.chosenKurs.rhythmus()}" id="rhythmus"/>
             
